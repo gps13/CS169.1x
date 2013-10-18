@@ -8,10 +8,9 @@ module FunWithStrings
     words=clearstr.split(" ")
     array=Hash.new(0)
     words.each do |word|
-    array[word]+=1
-  end
-  return array
-    # your code here
+      array[word]+=1
+    end
+    return array
   end
   def anagram_groups
     # your code here
