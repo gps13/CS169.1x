@@ -4,7 +4,7 @@ module FunWithStrings
     return str == str.reverse
   end
   def count_words(str)
-    clearstr= str.downcase.gsub(/\W/,'')
+    clearstr= str.downcase
     words=clearstr.split(" ")
     array=Hash.new(0)
     words.each do |word|
