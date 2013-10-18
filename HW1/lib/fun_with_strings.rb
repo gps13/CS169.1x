@@ -11,8 +11,20 @@ module FunWithStrings
     return array
   end
   def anagram_groups
-    # your code here
+    result = Array.new(0)
+    array = self.downcase.scan(/\b[a-z]+/)
+    array.each do |word|
+      temp_array = []
+      array.each do |gather|
+        if gather.chars.sort.join == word.chars.sort.join
+          temp_array << gather
+        end
+      end
+    result << temp_array     
+    end
+    return result.uniq
   end
+
 end
 
 # make all the above functions available as instance methods on Strings:
